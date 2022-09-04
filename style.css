@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body, html {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+canvas {
+  position:absolute;
+  top:0;
+  left:0
+}
+
+:root{
+  --border: #00d9ff;
+  --avt-size: 100px;
+}
+
+
+.container{
+  display: flex;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+  width: 300px;
+  height: 500px;
+  background-color: transparent;
+  border-radius: 20px;
+  z-index: 9999;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+.avt{
+  width: var(--avt-size);
+  height: var(--avt-size);
+  margin-top: 20px;
+  
+
+}
+.avt img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+ 
+}
+.avt img{
+  box-shadow: 0 0 15px rgb(59, 59, 255);
+  animation: box_avt 2s linear infinite;
+}
+@keyframes box_avt{
+  0%{
+    box-shadow: 0 0 15px rgb(59, 59, 255);
+  }
+  20%{
+    box-shadow: 0 0 15px rgb(35, 229, 255);
+  }
+  40%{
+    box-shadow: 0 0 15px rgb(27, 255, 149);
+  }
+  60%{
+    box-shadow: 0 0 15px rgb(48, 255, 58);
+  }
+  80%{
+    box-shadow: 0 0 15px rgb(252, 255, 59);
+  }
+  100%{
+    box-shadow: 0 0 15px rgb(255, 59, 59);
+  }
+}
+.name{
+  display: flex;
+  position: relative;
+  margin-top: 25px;
+  background: linear-gradient(0, #333, #fff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 25px;
+  animation: text 2s linear infinite;
+  font-weight: 900;
+  
+  
+}
+@keyframes text {
+  0%{
+    background: linear-gradient(0, #850064, #e5ff00);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  25%{
+    background: linear-gradient(0, #fffb00, #ff0000);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  50%{
+    background: linear-gradient(0, #ff0000, #00ffff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  75%{
+    background: linear-gradient(0, #00fff2, #ff00d4);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  100%{
+    background: linear-gradient(0, #ff00d4, #008585);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+}
+.audio audio{
+   width: 100px; 
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.icon{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+}
+.icon img{
+  width: 80px;
+  height: auto;
+  margin: 10px;
+  border-radius: 50%;
+}
+.player{
+  position: relative;
+  display: flex;
+  flex-direction:row-reverse;
+  justify-content: center;
+  justify-items: end;
+  z-index: 999;
+}
+.player audio{
+  width: 100px;
+}
+.play {
+  width: 50%;
+  height: 50px;
+  border: 1px solid black;
+  }
+  

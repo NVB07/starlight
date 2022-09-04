@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+  <div class="main">
+    <div class="container">
+      <div class="center">
+        <div class="avt">
+          <img src="https://nvb07.github.io/profile/IMG_0009.JPG" alt="">         
+        </div>
+        <div class="name">BINH KMA </div>
+      </div>
+      <div class="row">
+        <div class="icon">
+          <a href="https://www.facebook.com/profile.php?id=100030906050783" target="_blank" class="facebook">
+            <img src="./icon/icons8-facebook-100.png" alt="">
+          </a>
+          <a href="https://www.tiktok.com/@nvb.7?lang=vi-VN&is_copy_url=1&is_from_webapp=v1" target="_blank" class="tiktok">
+            <img src="./icon/icons8-tiktok-100.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/nvbinh.7/" target="_blank" class="instagram">
+            <img src="./icon/icons8-instagram-100.png" alt="">
+          </a>
+          <a href="https://github.com/NVB07" target="_blank" class="github">
+            <img src="./icon/icons8-github-100.png" alt="">
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="player">
+      <div class="play">
+      <audio id="autoplay" onclick="autoplay()" src="./passlive_dot.mp3"  autoplay loop preload="auto" ></audio>
+    </div>
+    </div>
+  </div>
+    <script src="./script.js">    
+	    document.getElementById('autoplay').play();
+      $('autoplay()').click(function(){this.paused?this.play():this.pause();});
+
+    </script>
+</body>
+</html>
