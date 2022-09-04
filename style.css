@@ -156,10 +156,6 @@ canvas {
 }
 .player audio{
   width: 100px;
+  height: 20px;
 }
-.play {
-  width: 50%;
-  height: 50px;
-  border: 1px solid black;
-  }
   
