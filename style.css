@@ -95,7 +95,7 @@ canvas {
   font-size: 25px;
   animation: text 2s linear infinite;
   font-weight: 900;
-  
+  z-index: 9999;
   
 }
 @keyframes text {
@@ -148,11 +148,7 @@ canvas {
 }
 .player{
   position: relative;
-  display: flex;
-  flex-direction:row-reverse;
-  justify-content: center;
-  justify-items: end;
-  z-index: 999;
+  z-index: 9999;
 }
 .player audio{
   width: 100px;
