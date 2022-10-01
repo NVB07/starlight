@@ -113,60 +113,7 @@ canvas {
     background-position: 200% center;
   }
 }
-/* .name{
-  display: flex;
-  position: relative;
-  margin-top: 25px;
-  background: linear-gradient(0, #333, #fff);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 25px;
-  animation: text 2s linear infinite;
-  font-weight: 900;
-  z-index: 9999;
-  
-  
-}
-@keyframes text {
-  0%{
-    background: linear-gradient(0, #850064, #e5ff00);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  25%{
-    background: linear-gradient(0, #fffb00, #ff0000);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  50%{
-    background: linear-gradient(0, #ff0000, #00ffff);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  75%{
-    background: linear-gradient(0, #00fff2, #ff00d4);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  100%{
-    background: linear-gradient(0, #ff00d4, #008585);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
 
-} */
 
 .row{
   display: flex;
