@@ -1,3 +1,4 @@
+const $ = document.querySelector.bind(document);
 
 (function () {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
@@ -171,3 +172,52 @@ function animate() {
     requestAnimationFrame(animate);
 }
 animate();
+
+
+
+const audio = $('#audio')
+const play = $('#play-btn')
+const pause = $('#pause-btn')
+
+
+
+
+
+ 
+    // random link mp3
+   function random() {
+    var src;
+    var ran = Math.floor(Math.random() * 3);
+    
+    if(ran == 0){
+        src = "./mp3/phongdahanh.mp3"
+    }
+    if(ran == 1){
+        src = "./mp3/noiNhoTuaThienHa.mp3"
+    }
+    if(ran == 2){
+        src = "./mp3/JarofHeart.mp3"
+    }
+    //gán link mp3 vào src audio
+    audio.src= src;
+   }
+   
+
+  
+
+   //buton play pause
+    play.onclick = function () {
+        //run radom() src mp3
+        random()
+        
+        audio.play();
+        play.style.display = 'none'
+        pause.style.display = 'block'
+    
+      };
+    
+    pause.onclick = function () {
+        audio.pause();
+        pause.style.display = 'none'
+        play.style.display = 'block'
+      };
