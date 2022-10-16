@@ -261,7 +261,7 @@ const playList = [
     },
     {
         src:"./mp3/SinhRaDaLaThuDoiLapNhau.mp3",
-        nameSong:" Sinh Ra ĐãLà Thứ Đối Lập Nhau",
+        nameSong:" Sinh Ra Đã Là Thứ Đối Lập Nhau",
         single: "Emcee L (Da LAB) ft. Badbies",
         img: "https://i.ytimg.com/vi/redFrGBZoJY/maxresdefault.jpg"
 
