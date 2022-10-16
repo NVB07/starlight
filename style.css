@@ -10,7 +10,7 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 canvas {
@@ -31,13 +31,14 @@ canvas {
   flex-direction: column;
   justify-content:flex-start;
   align-items: center;
+  overflow-y: scroll;
+
 }
 
 
 .container{
   display: flex;
-  /* position: fixed; */
-  margin: 50px auto;
+  padding-bottom: 50px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -46,7 +47,6 @@ canvas {
   flex-direction: column;
   justify-items: center;
   width: 300px;
-  /* height: 500px; */
   background-color: transparent;
   border-radius: 20px;
   z-index: 99;
@@ -147,8 +147,7 @@ canvas {
   position: relative;
   z-index: 999;
   width: 300px ;
-  height: 80px;
-  margin-bottom: 30px;
+  min-height: 80px;
 }
 
 
@@ -212,7 +211,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5%;
+  padding-top: 30px;
   
 }
 #pause-btn {
