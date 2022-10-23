@@ -187,6 +187,7 @@ const play = $('#play-btn')
 const pause = $('#pause-btn')
 const next = $("#next-btn")
 const nameSong = $$(".name-music")
+const nameHead = $(".head")
 const nameSingle = $(".single-name")
 const photo = $("#img")
 const playList = [
@@ -195,6 +196,13 @@ const playList = [
         nameSong: "Cứ Chill Thôi ",
         single: "Chillies ft Suni Hạ Linh & Rhymastic",
         img: "https://lyrics-hot.com/wp-content/uploads/2021/02/loi-bai-hat-cu-chill-thoi-640.jpg"
+    },
+    {
+        src:"./mp3/XeDap.mp3",
+        nameSong:" Xe Đạp ",
+        single: "CM1X",
+        img: "https://i.ytimg.com/vi/3v3YYpVrEuA/maxresdefault.jpg"
+
     },
     {
         src:"./mp3/MuonRuouToTinh.mp3",
@@ -225,10 +233,66 @@ const playList = [
 
     },
     {
+        src:"./mp3/ChungTaCuaHienTai.mp3",
+        nameSong:" Chúng Ta Của Hiện Tại- lofi",
+        single: "MTP x CM1X",
+        img: "https://media.vov.vn/sites/default/files/styles/large/public/2021-02/chungtacuahientai.jpg"
+
+    },
+    {
+        src:"./mp3/BuongDoiTayNhauRa.mp3",
+        nameSong:" Buông Đôi Tay Nhau Ra",
+        single: "Sơn Tùng-MTP ",
+        img: "https://i.ytimg.com/vi/LCyo565N_5w/maxresdefault.jpg"
+
+    },
+    {
+        src:"./mp3/HayTraoChoAnh.mp3",
+        nameSong:"Hãy Trao Cho Anh",
+        single: "Sơn Tùng-MTP ",
+        img: "https://amthanhthudo.com/wp-content/uploads/hay-trao-cho-anh.jpg"
+
+    },
+    {
+        src:"./mp3/LacTroi.mp3",
+        nameSong:"Lạc Trôi",
+        single: "Sơn Tùng-MTP ",
+        img: "https://i.ytimg.com/vi/DrY_K0mT-As/maxresdefault.jpg"
+
+    },
+    {
+        src:"./mp3/EmCuaNgayHomQua.mp3",
+        nameSong:"Em Của Ngày Hôm Qua",
+        single: "Sơn Tùng-MTP ",
+        img: "https://loretofest.org/cdn/files/loi-bai-hat-em-cua-ngay-hom-qua.jpg"
+
+    },
+    {
+        src:"./mp3/HoaVoSac.mp3",
+        nameSong:"Hoa Vô Sắc",
+        single: "K-ICM , Jack ",
+        img: "https://i.ytimg.com/vi/gZKkD3edFaE/maxresdefault.jpg"
+
+    },
+    {
         src:"./mp3/ChungTaCuaSauNay.mp3",
         nameSong:" Chúng Ta Của Sau Này",
         single: "T.R.I",
         img: "https://avatar-ex-swe.nixcdn.com/song/share/2021/01/27/f/1/e/c/1611738359456.jpg"
+
+    },
+    {
+        src:"./mp3/HetThuongCanNho.mp3",
+        nameSong:" Hết Thương Cạn Nhớ",
+        single: "Đức Phúc",
+        img: "https://i.ytimg.com/vi/DZDYZ9nRHfU/maxresdefault.jpg"
+
+    },
+    {
+        src:"./mp3/DungLoAnhDoiMa.mp3",
+        nameSong:" Đừng Lo Anh Đợi Mà",
+        single: "Mr.Siro",
+        img: "https://i.ytimg.com/vi/BnWiFq0AxQc/maxresdefault.jpg"
 
     },
     {
@@ -280,14 +344,24 @@ const playList = [
         img: "https://i.ytimg.com/vi/w2DBMrXJDIo/sddefault.jpg"
 
     },
+    {
+        src:"./mp3/LegendsNeverDie.mp3",
+        nameSong:"Legends Never Die",
+        single: " Against The Curent-World 2017",
+        img: "https://i.ytimg.com/vi/r6zIGXun57U/maxresdefault.jpg"
+
+    },
 ]
 
-
+const textclip = $(".text-box")
 //buton play pause
 play.onclick = function () {
     audio.play();
     play.style.display = 'none'
     pause.style.display = 'block'
+    textclip.classList.add("move")
+    nameHead.textContent = playList[i].nameSong
+
 
   }
 
@@ -295,6 +369,8 @@ pause.onclick = function () {
     audio.pause();
     pause.style.display = 'none'
     play.style.display = 'block'
+    textclip.classList.remove("move")
+
   };
 
 
@@ -306,6 +382,7 @@ var i = 0;
         nameSong[j].textContent = playList[i].nameSong
     }
     photo.src = playList[i].img
+    
 
 next.onclick = function(){
     i++;
@@ -318,6 +395,9 @@ next.onclick = function(){
         nameSong[j].textContent = playList[i].nameSong
     }
     photo.src = playList[i].img
+    nameHead.textContent = playList[i].nameSong
+    textclip.classList.add("move")
+
       // nut play  
     audio.play()
     play.style.display = 'none'
@@ -335,6 +415,9 @@ back.onclick = function(){
         nameSong[j].textContent = playList[i].nameSong
     }
     photo.src = playList[i].img
+    nameHead.textContent = playList[i].nameSong
+    textclip.classList.add("move")
+
       // nut play  
     audio.play()
     play.style.display = 'none'
