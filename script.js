@@ -188,26 +188,26 @@ const pause = $('#pause-btn')
 const next = $("#next-btn")
 const nameSong = $$(".name-music")
 const nameHead = $(".head")
-const nameSingle = $(".single-name")
+const nameSinger = $(".singer-name")
 const photo = $("#img")
 const playList = [
     {
         src:"./mp3/CuChillThoi.mp3",
         nameSong: "Cứ Chill Thôi ",
-        single: "Chillies ft Suni Hạ Linh & Rhymastic",
+        singer: "Chillies ft Suni Hạ Linh & Rhymastic",
         img: "https://lyrics-hot.com/wp-content/uploads/2021/02/loi-bai-hat-cu-chill-thoi-640.jpg"
     },
     {
         src:"./mp3/XeDap.mp3",
         nameSong:" Xe Đạp ",
-        single: "CM1X",
+        singer: "CM1X",
         img: "https://i.ytimg.com/vi/3v3YYpVrEuA/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/MuonRuouToTinh.mp3",
         nameSong:" Mượn Rượu Tỏ Tình",
-        single: "BIGDADDY x EMILY",
+        singer: "BIGDADDY x EMILY",
         img: "https://i.ytimg.com/vi/aGUQsb31TEw/hq720.jpg"
 
     },
@@ -215,139 +215,139 @@ const playList = [
     {
         src:"./mp3/HaiMuoiHai.mp3",
         nameSong: "Hai Mươi Hai",
-        single: "amme x Hứa Kim Tuyền",
+        singer: "amme x Hứa Kim Tuyền",
         img: "https://i.ytimg.com/vi/n2iFnPaAsnU/maxresdefault.jpg"
     },
     {
         src:"./mp3/AnhMetRoi.mp3",
         nameSong:" Anh Mệt Rồi",
-        single: "Anh Quân Idol x Freak D",
+        singer: "Anh Quân Idol x Freak D",
         img: "https://i.ytimg.com/vi/wAQnEYVcOq4/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/AnhSeQuenEmMa.mp3",
         nameSong:" Anh Sẽ Quên Em Mà",
-        single: "NIT ft Sing",
+        singer: "NIT ft Sing",
         img: "https://i.ytimg.com/vi/tYNX2E6v6jU/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/ChungTaCuaHienTai.mp3",
         nameSong:" Chúng Ta Của Hiện Tại- lofi",
-        single: "MTP x CM1X",
+        singer: "MTP x CM1X",
         img: "https://media.vov.vn/sites/default/files/styles/large/public/2021-02/chungtacuahientai.jpg"
 
     },
     {
         src:"./mp3/BuongDoiTayNhauRa.mp3",
         nameSong:" Buông Đôi Tay Nhau Ra",
-        single: "Sơn Tùng-MTP ",
+        singer: "Sơn Tùng-MTP ",
         img: "https://i.ytimg.com/vi/LCyo565N_5w/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/HayTraoChoAnh.mp3",
         nameSong:"Hãy Trao Cho Anh",
-        single: "Sơn Tùng-MTP ",
+        singer: "Sơn Tùng-MTP ",
         img: "https://amthanhthudo.com/wp-content/uploads/hay-trao-cho-anh.jpg"
 
     },
     {
         src:"./mp3/LacTroi.mp3",
         nameSong:"Lạc Trôi",
-        single: "Sơn Tùng-MTP ",
+        singer: "Sơn Tùng-MTP ",
         img: "https://i.ytimg.com/vi/DrY_K0mT-As/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/EmCuaNgayHomQua.mp3",
         nameSong:"Em Của Ngày Hôm Qua",
-        single: "Sơn Tùng-MTP ",
+        singer: "Sơn Tùng-MTP ",
         img: "https://loretofest.org/cdn/files/loi-bai-hat-em-cua-ngay-hom-qua.jpg"
 
     },
     {
         src:"./mp3/HoaVoSac.mp3",
         nameSong:"Hoa Vô Sắc",
-        single: "K-ICM , Jack ",
+        singer: "K-ICM , Jack ",
         img: "https://i.ytimg.com/vi/gZKkD3edFaE/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/ChungTaCuaSauNay.mp3",
         nameSong:" Chúng Ta Của Sau Này",
-        single: "T.R.I",
+        singer: "T.R.I",
         img: "https://avatar-ex-swe.nixcdn.com/song/share/2021/01/27/f/1/e/c/1611738359456.jpg"
 
     },
     {
         src:"./mp3/HetThuongCanNho.mp3",
         nameSong:" Hết Thương Cạn Nhớ",
-        single: "Đức Phúc",
+        singer: "Đức Phúc",
         img: "https://i.ytimg.com/vi/DZDYZ9nRHfU/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/DungLoAnhDoiMa.mp3",
         nameSong:" Đừng Lo Anh Đợi Mà",
-        single: "Mr.Siro",
+        singer: "Mr.Siro",
         img: "https://i.ytimg.com/vi/BnWiFq0AxQc/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/HoaNoKhongMau.mp3",
         nameSong:" Hoa Nở Không Màu",
-        single: "Hoài Lâm x Freak D",
+        singer: "Hoài Lâm x Freak D",
         img: "https://i.ytimg.com/vi/y_6aSG2yfe8/mqdefault.jpg"
 
     },
     {
         src:"./mp3/MuaHaNamAy.mp3",
         nameSong:" Mùa Hạ Năm Ấy",
-        single: "Linh",
+        singer: "Linh",
         img: "https://i.ytimg.com/vi/bbiXiY_Ec_c/sddefault.jpg"
 
     },
     {
         src:"./mp3/NhuAnhDaThayEm.mp3",
         nameSong:"Như Anh Đã Thấy Em",
-        single: "Phúc XP x Freak D",
+        singer: "Phúc XP x Freak D",
         img: "https://i.ytimg.com/vi/cPbp2iFaZRo/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/PhaiChangEmDaYeu.mp3",
         nameSong:" Phải Chăng Em Đã Yêu",
-        single: "Juky San ft Redt x Freak D ",
+        singer: "Juky San ft Redt x Freak D ",
         img: "https://i.ytimg.com/vi/O81_4VAson4/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/SinhRaDaLaThuDoiLapNhau.mp3",
         nameSong:" Sinh Ra Đã Là Thứ Đối Lập Nhau",
-        single: "Emcee L (Da LAB) ft. Badbies",
+        singer: "Emcee L (Da LAB) ft. Badbies",
         img: "https://i.ytimg.com/vi/redFrGBZoJY/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/TinhKaNgotNgao.mp3",
         nameSong:"Tình Ka Ngọt Ngào",
-        single: "LẬP NGUYÊN x YẾN NỒI CƠM ĐIỆN",
+        singer: "LẬP NGUYÊN x YẾN NỒI CƠM ĐIỆN",
         img: "https://i.ytimg.com/vi/Yr7FIIshNxo/maxresdefault.jpg"
 
     },
     {
         src:"./mp3/Yeu1NguoiCoLe.mp3",
         nameSong:"Yêu Một Người Có Lẽ",
-        single: " Lou Hoàng - Miu Lê",
+        singer: " Lou Hoàng - Miu Lê",
         img: "https://i.ytimg.com/vi/w2DBMrXJDIo/sddefault.jpg"
 
     },
     {
         src:"./mp3/LegendsNeverDie.mp3",
         nameSong:"Legends Never Die",
-        single: " Against The Curent-World 2017",
+        singer: " Against The Curent-World 2017",
         img: "https://i.ytimg.com/vi/r6zIGXun57U/maxresdefault.jpg"
 
     },
@@ -377,7 +377,7 @@ pause.onclick = function () {
 // xử lí next / back mp3
 var i = 0;
     audio.src = playList[i].src
-    nameSingle.textContent = playList[i].single
+    nameSinger.textContent = playList[i].singer
     for( let j = 0 ; j < nameSong.length; j++){
         nameSong[j].textContent = playList[i].nameSong
     }
@@ -390,7 +390,7 @@ next.onclick = function(){
         i = 0;
     } 
     audio.src = playList[i].src
-    nameSingle.textContent = playList[i].single
+    nameSinger.textContent = playList[i].singer
     for( let j = 0 ; j < nameSong.length; j++){
         nameSong[j].textContent = playList[i].nameSong
     }
@@ -410,7 +410,7 @@ back.onclick = function(){
         i = playList.length -1 ;
     }
     audio.src = playList[i].src
-    nameSingle.textContent = playList[i].single
+    nameSinger.textContent = playList[i].singer
     for( let j = 0 ; j < nameSong.length; j++){
         nameSong[j].textContent = playList[i].nameSong
     }
