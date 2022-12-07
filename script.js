@@ -354,37 +354,24 @@ const playList = [
 ]
 
 const textclip = $(".text-box")
-//buton play pause
-play.onclick = function () {
+
+function audioPlay(){
     audio.play();
     play.style.display = 'none'
     pause.style.display = 'block'
     textclip.classList.add("move")
     nameHead.textContent = playList[i].nameSong
+}
 
 
-  }
-
-pause.onclick = function () {
+function audioPause(){
     audio.pause();
     pause.style.display = 'none'
     play.style.display = 'block'
     textclip.classList.remove("move")
+}
 
-  };
-
-
-// xử lí next / back mp3
-var i = 0;
-    audio.src = playList[i].src
-    nameSinger.textContent = playList[i].singer
-    for( let j = 0 ; j < nameSong.length; j++){
-        nameSong[j].textContent = playList[i].nameSong
-    }
-    photo.src = playList[i].img
-    
-
-next.onclick = function(){
+function audioNext(){
     i++;
     if( i >= playList.length ){
         i = 0;
@@ -397,14 +384,10 @@ next.onclick = function(){
     photo.src = playList[i].img
     nameHead.textContent = playList[i].nameSong
     textclip.classList.add("move")
+    audioPlay();
+}
 
-      // nut play  
-    audio.play()
-    play.style.display = 'none'
-    pause.style.display = 'block'
-    }
-
-back.onclick = function(){
+function audioBack(){
     i--;
     if( i < 0 ){
         i = playList.length -1 ;
@@ -417,17 +400,48 @@ back.onclick = function(){
     photo.src = playList[i].img
     nameHead.textContent = playList[i].nameSong
     textclip.classList.add("move")
+    audioPlay();
+}
 
-      // nut play  
-    audio.play()
-    play.style.display = 'none'
-    pause.style.display = 'block'
+
+
+play.addEventListener("click", audioPlay);// click play
+pause.addEventListener("click", audioPause); //click pause
+
+// xử lí next / back mp3
+var i = 0;
+    audio.src = playList[i].src
+    nameSinger.textContent = playList[i].singer
+    for( let j = 0 ; j < nameSong.length; j++){
+        nameSong[j].textContent = playList[i].nameSong
+    }
+    photo.src = playList[i].img
+
+
+    // xử lí ấn phím Space, Left, Right ( Play/Pause, Back, Next)
+    function keydownHandler(evt) {
+        if( audio.paused && evt.keyCode == 32){
+            audioPlay();
+        }
+        else if(audio.play && evt.keyCode == 32){
+            audioPause();
+        };
+        if (evt.keyCode == 39){
+            audioNext();
+        }
+        else if (evt.keyCode == 37){
+            audioBack();
+        }
     }
 
-// next khi kết thúc  mp3
-audio.onended = function(){
-    next.click();
-}
+
+    next.addEventListener("click", audioNext);// click next
+    back.addEventListener("click", audioBack); // click back
+
+    // next khi kết thúc  mp3
+    audio.onended = function(){
+        next.click();
+    }
 
 
  
@@ -439,8 +453,3 @@ audio.onended = function(){
 //     console.log(src)
 //     audio.src= src;
 //    }
-   
-
-  
-
-   
