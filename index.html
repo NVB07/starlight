@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title class="head">Nguyen Van Binh</title>
 </head>
-<body>
+<body onkeydown="keydownHandler(event)">
   <canvas id="bgCanvas"></canvas>
   <div class="main">
     <div class="container">
@@ -53,8 +53,8 @@
     </div>
     <div class="player">
       <i id="back-btn" class="fa-solid fa-backward control-btn "></i>
-      <i id="play-btn" class=" fa-solid fa-play control-btn big "></i>
-      <i id="pause-btn" class=" fa-solid fa-pause control-btn big "></i>
+      <i id="play-btn" class=" fa-solid fa-play control-btn big " ></i>
+      <i id="pause-btn" class=" fa-solid fa-pause control-btn big " ></i>
       <i id="next-btn" class="fa-solid fa-forward control-btn "></i>
       <audio id="audio" preload="metadata" type="audio/mp3" src=""></audio>
       
